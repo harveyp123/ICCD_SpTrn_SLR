@@ -2,12 +2,14 @@
 
 Steps to reproduce the results:
 
-1. Install the environment: 
+##### 1. Install the environment: 
 
 `pip install -r requirements.txt`
 
+<br />
 
-2. Run the dense training:
+
+##### 2. Run the dense training:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
 
@@ -20,7 +22,10 @@ Also change the `--running-dir /home/hop20001/ADMM_SLR_GNN` to `--running-dir pa
 
 `bash run_dense_training.sh`
 
-3. Run the SLR training:
+<br />
+
+
+##### 3. Run the SLR training:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
 
