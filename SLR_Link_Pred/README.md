@@ -23,7 +23,7 @@ Also change the `--running-dir /home/hop20001/ADMM_SLR_GNN` to `--running-dir pa
 <br />
 
 
-##### 3. Run the SLR training:
+##### 3. Run the SLR based reweighted training and retraining:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
 
