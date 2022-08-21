@@ -1,0 +1,9 @@
+# define prune ratios for your network
+# 46.10 / 1.86x (filter sparsity / weight sparsity)
+prune_ratios:
+   fc1.weight:
+     0.5
+   fc2.weight:
+     0.5
+   fc3.weight:
+     0.5
