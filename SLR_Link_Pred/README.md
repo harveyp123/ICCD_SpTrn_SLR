@@ -5,7 +5,6 @@ Steps to reproduce the results:
 ##### 1. Install the environment: 
 
 `pip install -r requirements.txt`
-
 <br />
 
 
@@ -21,7 +20,6 @@ Then modify the 1st line of the 'run_dense_training.sh' to `cd path/to/home/main
 Also change the `--running-dir /home/hop20001/ADMM_SLR_GNN` to `--running-dir path/to/home/main/SLR_Link_Pred/` after `python main_dense.py`. Then run:
 
 `bash run_dense_training.sh`
-
 <br />
 
 
