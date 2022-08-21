@@ -6,6 +6,7 @@ Steps to reproduce the results:
 
 `pip install -r requirements.txt`
 
+
 2. Run the dense training:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
