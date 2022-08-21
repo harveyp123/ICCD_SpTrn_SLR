@@ -1,1 +1,1 @@
-#### Dataset is generateed through graph training. 
+#### Dataset is generated through graph training. 
