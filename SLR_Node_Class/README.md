@@ -1,4 +1,4 @@
-#### This directory is for SLR training over 3 link prediction dataset: ia-email, wiki-talk, stackoverflow
+#### This directory is for SLR training over 1 node classification dataset: brain
 
 Steps to reproduce the results:
 
