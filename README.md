@@ -16,7 +16,7 @@ Folder `SLR_Link_Pred` is the folder for SLR training for link prediction, which
 
 ###### 2. Node classification & SLR
 
-Folder `SLR_Link_Pred` is the folder for SLR training for node classification, which follows dense training -> reweight training -> sparse training procedure. 
+Folder `SLR_Node_Class` is the folder for SLR training for node classification, which follows dense training -> reweight training -> sparse training procedure. 
 
 
 
