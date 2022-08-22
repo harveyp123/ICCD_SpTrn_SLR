@@ -13,10 +13,12 @@ we use the SLR method for train and prune.
 ##### Sparse training: 
 we follow same experiment setup as RigL paper, using weight magnitute for drop and weight gradient for grow. 
 
-##### 1. Link prediction & SLR
+##### Train and prune: 
+
+###### 1. Link prediction & SLR
 
 Folder `SLR_Link_Pred` is the folder for SLR training for link prediction, which follows dense training -> reweight training -> sparse training procedure. 
 
-##### 2. Node classification & SLR
+###### 2. Node classification & SLR
 
 Folder `SLR_Link_Pred` is the folder for SLR training for node classification, which follows dense training -> reweight training -> sparse training procedure. 
