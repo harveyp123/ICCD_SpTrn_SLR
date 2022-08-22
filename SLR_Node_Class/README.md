@@ -7,8 +7,10 @@ Steps to reproduce the results:
 `pip install -r requirements.txt`
 <br />
 
+##### 2. <a href="https://drive.google.com/file/d/1PAQrf3jKDBUFO1tUZChYkFUt13zZLlTw/view?usp=sharing" target="_blank">Download</a> the dataset,  
+unzip the file and put it into the `dataset` folder
 
-##### 2. Run the dense training:
+##### 3. Run the dense training:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
 
@@ -23,7 +25,7 @@ Also change the `--running-dir /home/hop20001/ADMM_SLR_GNN_Node_class` to `--run
 <br />
 
 
-##### 3. Run the SLR based reweighted training and retraining:
+##### 4. Run the SLR based reweighted training and retraining:
 
 Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
 
