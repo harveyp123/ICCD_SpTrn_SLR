@@ -5,6 +5,7 @@ Comparison between SLR method and sparse training method on GNN dataset.
   <br />
   <br />
   </p>
+ <embed src="/imgs/sparsity.pdf" type="application/pdf">
 Folder `SLR_Link_Pred` is the folder for SLR training for link prediction, which follows dense training -> reweight training -> sparse training procedure. 
 
 
