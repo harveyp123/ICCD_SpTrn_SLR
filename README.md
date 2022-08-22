@@ -1,5 +1,5 @@
 ## Towards Sparsification of Graph Neural Networks
-xfun::embed_file("imgs/sparsity.pdf")
+xfun::embed_file("/imgs/sparsity.pdf")
 
 Comparison between SLR method and sparse training method on GNN dataset. 
 <p align="center">
