@@ -7,9 +7,11 @@ Comparison between SLR method and sparse training method on GNN dataset.
   <br />
   </p>
 
-Train and prune: we use the SLR method for train and prune.
+##### Train and prune: 
+we use the SLR method for train and prune.
 
-Sparse training: we follow same experiment setup as RigL paper, using weight magnitute for drop and weight gradient for grow. 
+##### Sparse training: 
+we follow same experiment setup as RigL paper, using weight magnitute for drop and weight gradient for grow. 
 
 ##### 1. Link prediction & SLR
 
