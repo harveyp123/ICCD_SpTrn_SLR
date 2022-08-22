@@ -7,7 +7,8 @@ Steps to reproduce the results:
 `pip install -r requirements.txt`
 <br />
 
-##### 2. Download the dataset from: `https://drive.google.com/file/d/1PAQrf3jKDBUFO1tUZChYkFUt13zZLlTw/view?usp=sharing`, unzip the file and put it into the `dataset` folder
+##### 2. Download the dataset from: 
+`https://drive.google.com/file/d/1PAQrf3jKDBUFO1tUZChYkFUt13zZLlTw/view?usp=sharing`, unzip the file and put it into the `dataset` folder
 
 ##### 3. Run the dense training:
 
