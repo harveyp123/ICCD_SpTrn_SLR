@@ -33,6 +33,18 @@ For example, run the SLR training for ia-email dataset:
 
 `cd main/SLR_Link_Pred/bash_scripts/ia_email_dense`
 
-Then modify the 1st line of the 'run_slr_training.sh' to `cd path/to/home/main/SLR_Link_Pred/`. Change `path/to/home` to your own downloading folder. Also add the `--running-dir path/to/home/main/SLR_Link_Pred/` after `python main_dense.py`. Then run:
+Then modify the 1st line of the 'run_slr_training.sh' to `cd path/to/home/main/SLR_Link_Pred/`. Change `path/to/home` to your own downloading folder. Also add the `--running-dir path/to/home/main/SLR_Link_Pred/` after `python main_admm.py`. Then run:
+
+`bash run_slr_training.sh`
+
+##### 5. (optional) Run the ADMM based reweighted training and retraining:
+
+Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
+
+For example, run the SLR training for ia-email dataset: 
+
+`cd main/SLR_Link_Pred/bash_scripts/ia_email_dense`
+
+Then modify the 1st line of the 'run_admm_training.sh' to `cd path/to/home/main/SLR_Link_Pred/`. Change `path/to/home` to your own downloading folder. Also add the `--running-dir path/to/home/main/SLR_Link_Pred/` after `python main_admm.py`. Then run:
 
 `bash run_slr_training.sh`
