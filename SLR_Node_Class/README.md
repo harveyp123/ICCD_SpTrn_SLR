@@ -37,3 +37,16 @@ Then modify the 1st line of the 'run_slr_training.sh' to `cd path/to/home/main/S
 
 `bash run_slr_training.sh`
 
+
+##### 5. (optional) Run the ADMM based reweighted training and retraining:
+
+Go to the main/SLR_Link_Pred/bash_scripts folder, than run the bash scripts for a task. 
+
+For example, run the ADMM training for ia-email dataset: 
+
+`cd main/SLR_Link_Pred/bash_scripts/ia_email_dense`
+
+Then modify the 1st line of the 'run_admm_training.sh' to `cd path/to/home/main/SLR_Link_Pred/`. Change `path/to/home` to your own downloading folder. Also change the `--running-dir /home/hop20001/ADMM_SLR_GNN_Node_class` to `--running-dir path/to/home/main/SLR_Node_Class/` after `python main_admm.py`. Then run:
+
+`bash run_slr_training.sh`
+
