@@ -14,7 +14,7 @@ Running
 
 * **Dataset** Preparation
 
-  The link prediction datasets (ia-email, wiki-talk, stackoverflow) could be downloaded [here](https://drive.google.com/file/d/1jlfQHiz1slZ6mDeXgHABoIGEZffa--Ln/view?usp=sharing).
+  The link prediction datasets (brain) could be downloaded [here](https://drive.google.com/file/d/1jlfQHiz1slZ6mDeXgHABoIGEZffa--Ln/view?usp=sharing).
 
 Run sparse training
 ============
