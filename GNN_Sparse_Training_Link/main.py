@@ -257,8 +257,8 @@ def main():
 
 
         ################################# READ TRAIN DATA #################################
-        train_f = torch.jit.load('train.pt')
-        train_l = torch.jit.load('train_label.pt')
+        train_f = torch.jit.load('data/train.pt')
+        train_l = torch.jit.load('data/train_label.pt')
 
         for key, value in train_f.state_dict().items():
             train_features = value
@@ -268,8 +268,8 @@ def main():
         training_set = Dataset(train_features, train_labels)
 
         ################################# READ VAL DATA #################################
-        val_f = torch.jit.load('val.pt')
-        val_l = torch.jit.load('val_label.pt')
+        val_f = torch.jit.load('data/val.pt')
+        val_l = torch.jit.load('data/val_label.pt')
 
         for key, value in val_f.state_dict().items():
             val_features = value
@@ -279,8 +279,8 @@ def main():
         val_set = Dataset(val_features, val_labels)
         ################################# READ VAL DATA #################################
 
-        test_f = torch.jit.load('test.pt')
-        test_l = torch.jit.load('test_label.pt')
+        test_f = torch.jit.load('data/test.pt')
+        test_l = torch.jit.load('data/test_label.pt')
 
         for key, value in test_f.state_dict().items():
             test_features = value
