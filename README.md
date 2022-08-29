@@ -21,5 +21,5 @@ Folder `SLR_Node_Class` is for SLR training for node classification, which follo
 
 
 ##### Sparse training: 
-we follow same experiment setup as RigL paper, using weight magnitute for drop and weight gradient for grow. 
+we follow same experiment setup as RigL paper (rigging the lottery: making all tickets winners), using weight magnitute for drop and weight gradient for grow. 
 
