@@ -21,7 +21,7 @@ def parse_args_dense():
 
     parser.add_argument('--gpus', default='0', help='gpu device ids separated by comma. '
                         '`all` indicates use all gpus.')
-    parser.add_argument('--seed', default='0', help='Set random see for Reproducibility')              
+    parser.add_argument('--seed', default='0', help='Set random seed for Reproducibility')              
     parser.add_argument('--running-dir', type=str, default=osp.dirname(osp.realpath(__file__)), help='Running directory')
 
     parser.add_argument('--model-name', default='Cora_dense', help='Stored model name')
@@ -86,7 +86,7 @@ def parse_args_admm():
     parser.add_argument('--optimization', default='savlr', help='Optimization method name')
     parser.add_argument('--check-hardprune-acc', dest='check_acc', action='store_true',
                   help='Evaluate model at reweighted training')
-    parser.add_argument('--seed', default='0', help='Set random see for Reproducibility')      
+    parser.add_argument('--seed', default='0', help='Set random seed for Reproducibility')      
     args = parser.parse_args()
     args.dataset_dir = args.running_dir + '/dataset/' 
     args.model_path = args.running_dir + '/models/' + args.dataset + '/'
