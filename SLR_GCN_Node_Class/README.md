@@ -1,10 +1,20 @@
 
-#### This directory is for SLR training over 1 node classification dataset: brain
+#### This directory is for SLR training over GCN on 3 dataset: Cora, Pubmed, and CiteSeer
 
 Steps to reproduce the results:
 
 ##### 1. Install the environment: 
 
+Using the conda to create a new environment and activate it. 
+Then run following code to install pytorch on cuda 11.6: 
+`conda install pytorch=1.12.0 torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge`
+
+Then install pyg:
+pip install torch-scatter -f https://data.pyg.org/whl/torch-1.12.0+${CUDA}.html 
+pip install torch-sparse -f https://data.pyg.org/whl/torch-1.12.0+${CUDA}.html 
+pip install torch-geometric
+
+Install other necessary requirement:
 `pip install -r requirements.txt`
 <br />
 
