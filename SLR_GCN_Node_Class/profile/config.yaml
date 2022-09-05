@@ -1,0 +1,6 @@
+# define prune ratios for your network
+prune_ratios:
+   conv1.lin.weight:
+     0.5
+   conv2.lin.weight:
+     0
