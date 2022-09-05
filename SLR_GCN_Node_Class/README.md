@@ -49,5 +49,5 @@ Then modify the 1st line of the 'run_slr_training.sh' to `cd path/to/home/main/S
 
 ##### 4. (optional) Run the ADMM based reweighted training and retraining:
 
-Modify the SLR training script, change `export OPT=savlr` to `export OPT=admm', and follow the same step as step 3 to run ADMM training. 
+Modify the SLR training script, change `export OPT=savlr` to `export OPT=admm`, and follow the same step as step 3 to run ADMM training. 
 
