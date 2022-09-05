@@ -18,7 +18,9 @@ Folder `SLR_Link_Pred` is for SLR training for link prediction, which follows de
 
 Folder `SLR_Node_Class` is for SLR training for node classification, which follows dense training -> reweight training -> sparse training procedure. 
 
+###### 3. Graph Convolution Networks for Node classification datasets & SLR
 
+Folder `SLR_GCN_Node_Class` is for SLR training for node classification, which follows dense training -> reweight training -> sparse training procedure. The training and prune experiment is done on 3 dataset: Cora, Pubmed, and CiteSeer
 
 ##### Sparse training: 
 we follow same experiment setup as RigL paper (rigging the lottery: making all tickets winners), using weight magnitute for drop and weight gradient for grow. 
