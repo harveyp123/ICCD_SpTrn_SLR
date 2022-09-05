@@ -869,7 +869,7 @@ def combined_masked_retrain(ADMM, model, device, train_loader, optimizer, epoch,
     for i, (name, W) in enumerate(model.named_parameters()):
         if name not in ADMM.prune_ratios:
             continue
-        _, weight = weight_pruning(W, prune_ratios[name], args.sparsity_type)
+        _, weight = weight_pruning(W, ADMM.prune_ratios[name], args.sparsity_type)
         W.data = W
         weight = W.cpu().detach().numpy()
         non_zeros = weight != 0
