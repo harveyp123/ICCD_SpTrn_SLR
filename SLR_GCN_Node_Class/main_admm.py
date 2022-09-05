@@ -19,6 +19,10 @@ import utils
 # Parse arguments
 args = utils.parse_args_admm()
 
+# Set up random seed for Reproducibility
+torch.manual_seed(args.seed)
+
+
 # Set up logger file:
 logger = utils.get_logger(args.logging)
 
