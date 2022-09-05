@@ -10,8 +10,11 @@ Then run following code to install pytorch on cuda 11.6:
 `conda install pytorch=1.12.0 torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge`
 
 Then install pyg:
+
 `pip install torch-scatter -f https://data.pyg.org/whl/torch-1.12.0+${CUDA}.html`
+
 `pip install torch-sparse -f https://data.pyg.org/whl/torch-1.12.0+${CUDA}.html`
+
 `pip install torch-geometric`
 
 Install other necessary requirement:
