@@ -1,0 +1,5 @@
+numpy==1.23.1
+PyYAML==6.0
+torch==1.12.1
+torch_geometric==2.1.0.post1
+torchvision==0.13.1
