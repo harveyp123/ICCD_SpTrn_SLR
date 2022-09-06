@@ -15,7 +15,7 @@ def add_sparse_args(parser):
     parser.add_argument('--fix', action='store_true', help='Fix sparse connectivity during training. Default: True.')
     # parser.add_argument('--sparse_init', type=str, default='GMP', help='sparse initialization')
     parser.add_argument('--sparse_init', type=str, default='ERK', help='sparse initialization')
-    parser.add_argument('--growth', type=str, default='ucb', help='Growth mode. Choose from: momentum, random, random_unfired, gradient and ucb.')
+    parser.add_argument('--growth', type=str, default='gradient', help='Growth mode. Choose from: momentum, random, random_unfired, gradient')
     parser.add_argument('--death', type=str, default='magnitude', help='Death mode / pruning mode. Choose from: magnitude, SET, threshold.')
     parser.add_argument('--redistribution', type=str, default='none', help='Redistribution mode. Choose from: momentum, magnitude, nonzeros, or none.')
     parser.add_argument('--death-rate', type=float, default=0.50, help='The pruning rate / death rate.')
@@ -93,7 +93,7 @@ class LinearDecayTheta(object):
 
 class Masking(object):
     def __init__(self, optimizer, death_rate=0.3, growth_death_ratio=1.0, death_rate_decay=None, theta_decay=None, death_mode='magnitude', growth_mode='momentum', redistribution_mode='momentum', threshold=0.001, theta=1e-5, epsilon=1.0, factor=1, args=None):
-        growth_modes = ['random', 'momentum', 'momentum_neuron', 'gradient', 'ucb']
+        growth_modes = ['random', 'momentum', 'momentum_neuron', 'gradient']
         if growth_mode not in growth_modes:
             print('Growth mode: {0} not supported!'.format(growth_mode))
             print('Supported modes are:', str(growth_modes))
@@ -435,10 +435,6 @@ class Masking(object):
 
                 elif self.growth_mode == 'gradient':
                     new_mask = self.gradient_growth(name, new_mask, weight)
-
-                elif self.growth_mode == 'ucb':
-                    new_mask = self.ucb_growth(name, new_mask, weight)
-                    self.fired_times[name] = self.fired_times[name] + new_mask.float()
                     
                 new_nonzero = new_mask.sum().item()
                 # print("new_nonzero: ", new_nonzero)
@@ -571,37 +567,6 @@ class Masking(object):
         y, idx = torch.sort(torch.abs(grad).flatten(), descending=True)
         new_mask.data.view(-1)[idx[:total_regrowth]] = 1.0
         return new_mask
-
-    def ucb_growth(self, name, new_mask, weight):
-        total_regrowth = self.num_remove[name]
-        grad = self.get_gradient_for_weights(weight)
-        # print("new_mask: ", new_mask)
-        # print("new_mask==0: ", new_mask==0)
-        # grad = grad*(new_mask==0).float()
-        # print("grad of ", name, ": ", grad)
-
-        t = self.steps
-        # t = self.steps / self.prune_every_k_steps
-
-        # n = self.steps / self.prune_every_k_steps 
-        N_weight = self.fired_times[name]
-        # ucb = grad + self.theta * torch.sqrt(math.log(t) / (N_weight + 1e-5))
-        # approach 1
-        # ucb = grad + self.theta * math.log(t) / (N_weight + 1e-5)
-        # approach 2
-        ucb = (grad + self.theta * math.log(t) / (N_weight + self.epsilon))*(new_mask==0).float()
-
-        # print("Exploitation - grad of ", name, ": ", grad)
-        # print("Exploration - ", name, ":", self.theta * math.log(t) / (N_weight + 1e-5))
-        
-        # ucb = grad
-        # print(self.theta * t / Nt)
-
-        # y, idx = torch.sort(torch.abs(grad).flatten(), descending=True)
-        y, idx = torch.sort(torch.abs(ucb).flatten(), descending=True)
-        new_mask.data.view(-1)[idx[:total_regrowth]] = 1.0
-        return new_mask
-
 
 
     def momentum_neuron_growth(self, name, new_mask, weight):
