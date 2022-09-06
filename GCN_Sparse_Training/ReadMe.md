@@ -7,6 +7,7 @@ Steps to reproduce the results:
 
 Using the conda to create a new environment and activate it. 
 Then run following code to install pytorch 1.12.1 on cuda 10.2: 
+
 `conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch`
 
 Then install pyg:
