@@ -30,3 +30,14 @@ Folder `SLR_GCN_Node_Class` is for SLR training for node classification, which f
 ##### Sparse training: 
 we follow same experiment setup as RigL paper (rigging the lottery: making all tickets winners), using weight magnitute for drop and weight gradient for grow. 
 
+## Publication
+If you use [C-LSTM](https://dl.acm.org/doi/10.1145/3174243.3174253) in your design, please cite our [FPGA'18 paper](https://dl.acm.org/doi/10.1145/3174243.3174253):
+
+```
+@inproceedings{PengSpsGNN,
+  title={Towards Sparsification of Graph Neural Networks},
+  author={Hongwu Peng and Deniz Gurevin and Shaoyi Huang and Tong Geng and Weiwen Jiang and Omer Khan and Caiwen Ding},
+  booktitle={2022 IEEE 40th International Conference on Computer Design (ICCD)},
+  year={2022}
+}
+```
