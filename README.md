@@ -31,7 +31,7 @@ Folder `SLR_GCN_Node_Class` is for SLR training for node classification, which f
 we follow same experiment setup as RigL paper (rigging the lottery: making all tickets winners), using weight magnitute for drop and weight gradient for grow. 
 
 ## Publication
-If you use [C-LSTM](https://dl.acm.org/doi/10.1145/3174243.3174253) in your design, please cite our [FPGA'18 paper](https://dl.acm.org/doi/10.1145/3174243.3174253):
+If you use our code (https://arxiv.org/pdf/2209.04766.pdf) in your design, please cite our [ICCD'22 paper](https://arxiv.org/pdf/2209.04766.pdf):
 
 ```
 @inproceedings{PengSpsGNN,
