@@ -2,6 +2,11 @@
 
 Comparison between SLR method and sparse training method on GNN dataset. 
 <p align="center">
+  <img src="imgs/GCN.png" width="420">
+  <br />
+  <br />
+  </p>
+<p align="center">
   <img src="imgs/sparsity.png" width="420">
   <br />
   <br />
