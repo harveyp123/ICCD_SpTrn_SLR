@@ -242,7 +242,7 @@ class Masking(object):
                 self.masks[name][:] = (torch.rand(mask.shape) < density_dict[name]).float().data.cuda()
 
                 total_nonzero += density_dict[name] * mask.numel()
-            print(f"Overall sparsity {total_nonzero / total_params}")
+            print(f"Overall sparsity {1-(total_nonzero / total_params)}")
 
         elif mode == 'pattern_ERK':
             #TODO
