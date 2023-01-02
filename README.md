@@ -36,7 +36,7 @@ If you use our code in your design, please cite our [ICCD'22 paper](https://arxi
 ```
 @inproceedings{PengSpsGNN,
   title={Towards Sparsification of Graph Neural Networks},
-  author={Hongwu Peng and Deniz Gurevin and Shaoyi Huang and Tong Geng and Weiwen Jiang and Omer Khan and Caiwen Ding},
+  author={Peng, Hongwu and Gurevin, Deniz and Huang, Shaoyi and Geng, Tong and Jiang, Weiwen and Khan, Omer and Ding, Caiwen},
   booktitle={2022 IEEE 40th International Conference on Computer Design (ICCD)},
   year={2022}
 }
